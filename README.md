@@ -8,6 +8,8 @@ partitioning tree that is useful for nearest neighbor searches.
 
 How to install:
 
+Be sure to use Python 3.5
+
 export GROVECO_GOOGLE_API_KEY="YOUR_API_KEY_FOR_GOOGLE_HERE"
 pip install googlemaps
 
