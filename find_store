@@ -33,16 +33,26 @@ parser.add_argument("--output", help="text|json", dest="output")
 
 args = parser.parse_args()
 
-closest = find_store(args.address)
+try:
+  if args.zip != None:
+    address = args.zip
+except:
+  i = 0
 
-address = "{0}, {1}, {2} {3}".format(closest[0],closest[1],closest[2],closest[3])
-distance = closest[4]
+try:
+  if args.address != None:
+    address = args.address
+except:
+  i = 0
+
+closest = find_store(address)
+
+address = "{0}, {1}, {2} {3}".format(closest[2],closest[3],closest[4],closest[5])
+distance = closest[9]
 output = None
 units = None
 
 # treat address as zipcode
-if args.zip != None:
-  address = args.zip
 
 if args.units == None:
   units = 'mi'
