@@ -1,5 +1,11 @@
 # find_store
 
+# Note on this implementation
+
+This code finds the closest store location to an address using 
+googlemaps, and a kd-tree. A kd-tree is a kind of binary space
+partitioning tree that is useful for nearest neighbor searches.
+
 How to install:
 
 export GROVECO_GOOGLE_API_KEY="YOUR_API_KEY_FOR_GOOGLE_HERE"
